@@ -18,22 +18,24 @@ public class Login {
 	  
 	}
 
-	@Then("^user enters username and password$")
-	public void user_enters_username_and_password() throws Throwable {
-		driver.findElement(By.id("username")).sendKeys("admin");
-		driver.findElement(By.id("password")).sendKeys("Admin123");
+	@Then("^user enters \"(.*)\" and \"(.*)\"$")
+	public void user_enters_username_and_password(String username, String password) throws Throwable {
+		driver.findElement(By.id("username")).sendKeys(username);
+		driver.findElement(By.id("password")).sendKeys(password);
 	    
 	}
 
 	@Then("^user clicks on Login button$")
 	public void user_clicks_on_Login_button() throws Throwable {
 		driver.findElement(By.id("loginButton")).click();
+		Thread.sleep(9000);
 	   
 	}
 
 	@Then("^user Selects the login location and then clicks on Login button again$")
 	public void user_Selects_the_login_location_and_then_clicks_on_Login_button_again() throws Throwable {
-	   
+	  driver.findElement(By.xpath("//*[@id='AF - AGHOZANU AREA']")).click();
+	  driver.findElement(By.id("loginButton")).click();
 	   
 	}
 	

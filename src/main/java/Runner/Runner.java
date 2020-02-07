@@ -15,6 +15,19 @@ import cucumber.api.junit.Cucumber;
 		plugin={"pretty","html:Test-output"}
 		)
 
+/*
+Format Option is used to specify different formatting options for the output reports. Various options that can be used as for-matters are:
+Pretty: Prints the Gherkin source with additional colors and stack traces for errors. Use below code:
+format = {“pretty“}
+HTML: This will generate a HTML report at the location mentioned in the for-matter itself. Use below code:
+format = {“html:Folder_Name“}Format Option is used to specify different formatting options for the output reports. Various options that can be used as for-matters are:
+Pretty: Prints the Gherkin source with additional colors and stack traces for errors. Use below code:
+format = {“pretty“}
+HTML: This will generate a HTML report at the location mentioned in the for-matter itself. Use below code:
+ */
+ 
+
+
 public class Runner {
 
 }
