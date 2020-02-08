@@ -14,18 +14,28 @@ public class Login {
  public static WebDriver driver;
  Select select;
  
- @Before
+ @Before(order=0)
  public void setup()
  {
 	 System.out.println("inside before tag");
  }
+ @Before(order=1)
+ public void setup1()
+ {
+	 System.out.println("inside before tag i will be executed with priority 1");
+ }
  
- @After
+ 
+ @After//global hooks
  public void teardown()
  {
 	 System.out.println("inside after tag");
  }
- 
+ @After("@First")//local hooks
+ public void method()
+ {
+	 System.out.println("it will be executed just after first tag scenario");
+ }
  //without Example kyword
 	@Given("^user launches the url$")
 	public void user_launches_the_url() throws Throwable {
