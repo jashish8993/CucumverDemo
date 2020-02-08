@@ -5,12 +5,26 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 public class Login {
  public static WebDriver driver;
  Select select;
+ 
+ @Before
+ public void setup()
+ {
+	 System.out.println("inside before tag");
+ }
+ 
+ @After
+ public void teardown()
+ {
+	 System.out.println("inside after tag");
+ }
  
  //without Example kyword
 	@Given("^user launches the url$")

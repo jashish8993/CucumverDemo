@@ -14,9 +14,10 @@ import cucumber.api.junit.Cucumber;
 		monochrome=true,
 		//monochrome=true-----If it is set as true, it means that the console output for the Cucumber test are much more readable.
 		plugin={"pretty","html:Test-output"},
-		tags= {"@Smoke","@Sanity"}
+		tags= {"@Smoke,@Sanity"}
 		//{"1,2"}---it will be 1 OR 2
 		//{"1","2"}----it will be 1 AND 2
+		//{"~1,2"}----- not 1 or 2---means tag with 1 is not run but 2 will run
 		)
 
 /*
